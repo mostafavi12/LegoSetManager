@@ -159,9 +159,7 @@ def sort_treeview(tv, col):
 root = tk.Tk()
 root.title("Lego Sets Database")
 
-base_dir = os.path.dirname(os.path.abspath(__file__))
-db_path = os.path.join(base_dir, "..", "InfoExtractor", "db", "lego_parts.db")
-conn = sqlite3.connect(db_path)
+conn = sqlite3.connect(R"..\InfoExtractor\db\lego_parts.db")
 cursor = conn.cursor()
 
 label_set_number = tk.Label(root, text="Set Number:")
